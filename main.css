@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+        115deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0,0, 0, 0.4)
+      ),url('/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100vw;
+    padding: 20px 0;
+    overflow: auto;
+}
+.survey{
+    z-index: 1;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 0 red;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.466);
+    font-family: monospace;
+}
+.survey #title{
+    font-size: 26px;
+}
+.survey #title, .survey #description{
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+}
+.survey #description{
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.survey form{
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-direction: column;
+}
+.survey form label{
+    margin: 5px 6px;
+    font-size: 18px;
+}
+.survey form input{
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+.survey form .dropdown-label, .survey form  .feature-label, .survey form .opinion-label, .survey form  .textarea-label{
+    font-weight: 600;
+    font-size: 18px;
+}
+.survey form #dropdown{
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 10px;
+}
+.survey form .features{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+}
+.survey form textarea{
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+}
+input[type="submit"]{
+    font-size: 18px;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background: rgba(255, 255, 255, 0.842);
+    color: black;
+}
+@media screen and (max-width: 767.99px) {
+    body{
+        padding:  20px 35px 20px 20px;
+    }
+    .survey form .dropdown-label, .survey form  .feature-label, .survey form .opinion-label, .survey form  .textarea-label{
+        font-size: 16px;
+    }
+}

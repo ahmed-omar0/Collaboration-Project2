@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Collaboration-Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <section class="survey">
@@ -20,7 +22,7 @@
                 <input type="number" id="age" min="18" max="60" placeholder="Age">
                 <br>
 
-                <label for="dropdown">Which option best describes your current role?</label>
+                <label for="dropdown" class="dropdown-label">Which option best describes your current role?</label>
                 <select id="dropdown">
                     <option value="student">Student</option>
                     <option value="full-job">Full Time Job</option>
@@ -29,22 +31,36 @@
                     <option value="preferNo">Prefer not to say</option>
                 </select>
                 <br>
+                <div class="features">
+                    <label class="feature-label">What is your favorite feature of Our Project?</label>
+                    <div>
+                        <input type="radio" name="group1" id="definitely" value="Definitely"><label for="definitely">Definitely</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="group1" id="maybe" value="Maybe"><label for="maybe">Maybe</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="group1" id="not-sure" value="Not sure"><label for="not-sure">Not sure</label>
+                    </div>
+                    <br>
 
-                <label>What is your favorite feature of freeCodeCamp?</label>
-                <div><input type="radio" name="group1" id="definitely" value="Definitely"><label for="definitely">Definitely</label></div>
-                <div><input type="radio" name="group1" id="maybe" value="Maybe"><label for="maybe">Maybe</label></div>
-                <div><input type="radio" name="group1" id="not-sure" value="Not sure"><label for="not-sure">Not sure</label></div>
-                <br>
+                    <label class="opinion-label">What would you like to see improved? (Check all that apply)</label>
+                    <div>
+                        <input type="checkbox" id="front-end-projects" value="Front-end Projects"><label for="front-end-projects">Front-end Projects</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="back-end-projects" value="Back-end Projects"><label for="back-end-projects">Back-end Projects</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="data-visualization" value="Front-end Projects"><label for="data-visualization">Data Visualization</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="challenges" value="Challenges"><label for="challenges">Challenges</label>
+                    </div>
+                </div>
 
-                <label>What would you like to see improved? (Check all that apply)</label>
-                <div><input type="checkbox" id="front-end-projects" value="Front-end Projects"><label for="front-end-projects">Front-end Projects</label></div>
-                <div><input type="checkbox" id="back-end-projects" value="Back-end Projects"><label for="back-end-projects">Back-end Projects</label></div>
-                <div><input type="checkbox" id="data-visualization" value="Front-end Projects"><label for="data-visualization">Data Visualization</label></div>
-                <div><input type="checkbox" id="challenges" value="Challenges"><label for="challenges">Challenges</label></div>
-                <br>
-
-                <label for="textarea">Any comments or suggestions?</label>
-                <textarea id="textarea" placeholder="Enter your comment here..."></textarea>
+                <label for="textarea" class="textarea-label">Any comments or suggestions?</label>
+                <textarea id="textarea" placeholder="Enter your comment here..." rows="10" cols="5"></textarea>
                 <br>
 
                 <input type="submit" value="Submit">
